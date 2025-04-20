@@ -1,20 +1,16 @@
 "use client";
 import { useRouter } from "next/navigation";
-const Home = () => {
+const page = () => {
   const router = useRouter();
-  const navigate = (page: string) => {
-    router.push(`${page}`);
+  const goToPage1 = () => {
+    router.push(`/page1`);
   };
   return (
     <div>
-      <div>
-        <h1>Welcome to Home page</h1>
-      </div>
-      <div>
-        <button onClick={() => navigate("dashboard")}>Go to Dashboard</button>
-      </div>
+      <h1>Home</h1>
+      <button onClick={goToPage1}>Go to page 1</button>
     </div>
   );
 };
 
-export default Home;
+export default page;
